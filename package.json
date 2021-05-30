@@ -1,0 +1,27 @@
+{
+  "name": "discordjs-dashboard",
+  "version": "0.0.1",
+  "description": "A basic bot with dashboard",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon ./src/index.js",
+    "start": "node ./src/index.js",
+    "build": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TrixCoder/discordjs-dashboard.git"
+  },
+  "author": "TrixCoder",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.5.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "bugs": {
+    "url": "https://github.com/TrixCoder/discordjs-dashboard/issues"
+  },
+  "homepage": "https://github.com/TrixCoder/discordjs-dashboard#readme"
+}
