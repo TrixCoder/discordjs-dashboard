@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 3002;
 const routes = require('./routes');
 const mongoose = require('mongoose');
 const session = require('express-session');
-const Store = require('connect-mongo')(session);
+const Store = require('connect-mongo');
 
 mongoose.connect('mongodb://localhost/dashy',{
     useNewUrlParser: true,
@@ -21,7 +21,7 @@ app.use(session({
     },
     resave: false,
     saveUninitialized:false,
-    store: new Store({mongooseConnection:mongoose.connection})
+    store: new Store({mongoUrl:'mongodb://localhost/dashy'})
 }));
 app.use(passport.initialize());
 app.use(passport.session());
