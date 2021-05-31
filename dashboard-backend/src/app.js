@@ -8,11 +8,17 @@ const routes = require('./routes');
 const mongoose = require('mongoose');
 const session = require('express-session');
 const Store = require('connect-mongo');
+const cors = require('cors');
 
 mongoose.connect('mongodb://localhost/dashy',{
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
+
+app.use(cors({
+    origin: ['http://localhost:3000'],
+    credentials:true
+}))
 
 app.use(session({
     secret: 'secret',
